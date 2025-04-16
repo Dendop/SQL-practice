@@ -28,3 +28,5 @@ cat build_and_import | sqlite3 crimes.db
 ```
 ---
 Once the data is imported, you can run SQL queries to analyze the data. The queries and their answers are included in queries.sql. I'm still working on some of the queries.
+
+![entity](entity_screen.png)
