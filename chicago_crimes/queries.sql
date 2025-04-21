@@ -31,6 +31,13 @@ LIMIT 10;
 
 
 --5. What are the top ten communities that had the least amount of crimes? include the current pop,density and order by the num of reported crimes
+SELECT "communities"."name", "communities"."population", "communities"."density", COUNT(*) AS "number_of_crimes"
+FROM "chicago_crimes"
+JOIN "communities" ON "communities"."id" = "chicago_crimes"."community_area"
+GROUP BY "communities"."name", "communities"."population", "communities"."density"
+ORDER BY "number_of_crimes" ASC
+LIMIT 10;
+
 --6. What month had the most crimes reported and what was the average and median temperature high in the last six years?
 --7. What month had the most homicides reported and what was the average and median temperature high in the last six years?
 --8. List the most violent year and the number of arrests with percentage. Order by the number of crimes in decending order. Determine the most violent year by the number of reported Homicides, Assaults and Battery for that year.
