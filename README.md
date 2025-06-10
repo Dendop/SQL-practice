@@ -23,7 +23,7 @@ This project analyzes **crimes reported** in **Chicago**, along with **daily mea
 To build the tables and import the CSV files into the SQLite database, use the following command:
 
 ```bash
-cat build_and_import | sqlite3 crimes.db
+cat schema | sqlite3 crimes.db
 
 ```
 ---
